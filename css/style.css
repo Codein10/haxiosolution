@@ -52,3 +52,18 @@ select.hx-in{appearance:none;background-image:linear-gradient(45deg,transparent 
 
 /* Mobile */
 @media (max-width:760px){.site-nav{display:none!important}.hero-body{padding-top:40px!important;padding-bottom:80px!important}}
+
+/* ===== Work slider ===== */
+.bt-ctrl{display:flex;justify-content:flex-end;gap:12px;max-width:1320px;margin:0 auto;padding:0 24px 24px}
+.bt-btn{width:54px;height:54px;border-radius:50%;border:1px solid #3A3A3A;background:#0B0B0B;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s}
+.bt-btn:hover:not(:disabled){background:#1E8FCC;border-color:#1E8FCC}
+.bt-btn:disabled{opacity:.35;cursor:default}
+.bt-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-top:1px solid #262626;-webkit-overflow-scrolling:touch}
+.bt-track::-webkit-scrollbar{display:none}
+.bt-slide{flex:0 0 100%;scroll-snap-align:start;border-right:1px solid #262626!important;min-width:0}
+@media(min-width:700px){.bt-slide{flex-basis:50%}}
+@media(min-width:1050px){.bt-slide{flex-basis:33.3333%}}
+@media(min-width:1500px){.bt-slide{flex-basis:25%}}
+.bt-dots{display:flex;justify-content:center;gap:10px;padding:28px 0 36px;border-top:1px solid #262626}
+.bt-dots button{width:10px;height:10px;border-radius:999px;border:0;padding:0;background:#3A3A3A;cursor:pointer;transition:width .25s,background .25s}
+.bt-dots button.on{width:34px;background:#1E8FCC}
